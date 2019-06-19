@@ -58,70 +58,110 @@ html, body {
 
 @background: gray;
 @headerfont: Bangers; 
-.whole {
-	display: block;
-	margin: 0 auto;
-	width: 875px;
-	margin-top: 30px;
-	margin-bottom: 80px;	
-}
-
-.header{
-	font-family: @headerfont;
-	margin-left: 0px;
-}
 
 .flex{
 	display: flex;
 	margin-bottom: 50px;
 	margin-right: 0px;
 }
-h1{
-	font-size: 50px;
-	.header();
-	text-align: left; 
-   
-   }
-
-h2{
-	font-size: 30px;
-	.header();
-}
-
-.nar{
-	.flex();
-	vertical-align: top; 
-	padding-top: 11px;
 
 
-	.lists{
-		display: inline;
-		margin-right: 60px; 
-		color: @background; 
+
+.whole {
+	display: block;
+	margin: 0 auto;
+	width: 875px;
+	margin-top: 30px;
+	margin-bottom: 80px;
+	@media (max-width: 500px){
+		width: 100%;
+		padding: 15px; 
 	}
-}
-.top{
-	.flex();
-}
+	
 
-.firstbutton{
-	margin-top: 40px; 
-}
-.container{
-	width: 50%;
-	margin-right: 25px;
-}
 
-li{
-	margin-left: 30px;
-}
+	.header{
+		font-family: @headerfont;
+		margin-left: 0px;
+	}
 
-.line{
-	margin-top: 40px; 
-	margin-bottom: 40px;
-}
-.copyright{
-	text-align: center; 
-	margin-top: 70px; 
-	background-color: @background; 
+	h1{
+		font-size: 50px;
+		.header();
+		text-align: left; 
+	
+	}
+
+	h2{
+		font-size: 30px;
+		.header();
+	}
+
+	.nar{
+		.flex();
+		vertical-align: top; 
+		padding-top: 11px;
+
+		@media (max-width: 500px){
+			flex-direction: column; 
+			justify-content: center;
+			text-align: left; 
+			width: 100%;	
+		}
+
+
+		.lists{
+			display: inline;
+			margin-right: 60px; 
+			color: @background; 
+
+			@media(max-width: 500px){
+				border-bottom: 1px solid black;
+			}
+		}
+	}
+	.top{
+		.flex();
+		@media(max-width: 500px){
+			flex-direction: column;
+		}
+	}
+
+	.selfie{
+		margin-bottom: 20px;
+
+		@media(max-width: 500px){
+				display: none;
+		}
+	}
+
+	.firstbutton{
+		margin-top: 40px; 
+	}
+	.container{
+		width: 50%;
+		margin-right: 25px;
+
+		@media(max-width: 500px){
+			width: 100%; 
+		}
+	}
+
+	li{
+		margin-left: 30px;
+
+		@media(max-width: 500px){
+			width: 100%;
+		}
+	}
+
+	.line{
+		margin-top: 40px; 
+		margin-bottom: 40px;
+	}
+	.copyright{
+		text-align: center; 
+		margin-top: 70px; 
+		background-color: @background; 
+	}
 }
