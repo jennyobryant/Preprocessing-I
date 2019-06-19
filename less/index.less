@@ -56,6 +56,8 @@ html, body {
     height: 100%;
 }
 
+@background: gray;
+@headerfont: Bangers; 
 .whole {
 	display: block;
 	margin: 0 auto;
@@ -64,36 +66,47 @@ html, body {
 	margin-bottom: 80px;	
 }
 
+.header{
+	font-family: @headerfont;
+	margin-left: 0px;
+}
+
+.flex{
+	display: flex;
+	margin-bottom: 50px;
+	margin-right: 0px;
+}
 h1{
 	font-size: 50px;
-	font-family: Bangers; 
-	margin-left: 0px;
+	.header();
 	text-align: left; 
    
    }
 
 h2{
 	font-size: 30px;
-	font-family: Bangers;
-	margin-left: 0px;
+	.header();
 }
+
 .nar{
-	display: flex;
-	margin-right: 0px; 
+	.flex();
 	vertical-align: top; 
 	padding-top: 11px;
-}
 
-.lists{
-	display: inline;
-	margin-right: 60px; 
-	color: gray; 
+
+	.lists{
+		display: inline;
+		margin-right: 60px; 
+		color: @background; 
+	}
 }
 .top{
-	display: flex;
-	margin-bottom: 50px;
+	.flex();
 }
 
+.firstbutton{
+	margin-top: 40px; 
+}
 .container{
 	width: 50%;
 	margin-right: 25px;
@@ -102,7 +115,13 @@ h2{
 li{
 	margin-left: 30px;
 }
+
+.line{
+	margin-top: 40px; 
+	margin-bottom: 40px;
+}
 .copyright{
 	text-align: center; 
 	margin-top: 70px; 
+	background-color: @background; 
 }
